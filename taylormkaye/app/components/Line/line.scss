@@ -6,3 +6,9 @@
     z-index: 10;
     border: none;
 }
+
+@media screen and (max-width: 640px) {
+    .line {
+        height: 3px;
+    }
+}

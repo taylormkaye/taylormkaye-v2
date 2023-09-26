@@ -31,7 +31,6 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${corben.variable} ${roboto.variable}`}>
-                <Nav />
                 {children}
             </body>
         </html>

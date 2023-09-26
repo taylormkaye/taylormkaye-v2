@@ -1,7 +1,11 @@
 import './line.scss';
 
-const Line = () => {
-    return <hr className="line" />;
+type Props = {
+    className?: string;
+};
+
+const Line = ({ className }: Props) => {
+    return <hr className={`line ${className}`} />;
 };
 
 export default Line;

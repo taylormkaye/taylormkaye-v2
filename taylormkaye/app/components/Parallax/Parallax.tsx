@@ -1,38 +1,34 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import './parallax.scss';
-import Line from '../Line';
+import { ReactNode, useEffect, useState } from 'react';
 
 type Props = {
-    startingYPos: number;
+    children: ReactNode;
+    speedCoef?: number;
+    className?: string;
 };
 
-const Shutter = ({ startingYPos }: Props) => {
-    const ref = useRef<HTMLDivElement>(null);
-    const parallax = () => {
-        let yPos = 0;
-        if (window !== undefined) {
-            yPos = 0 - window.scrollY / 30;
-        }
-        if (ref.current) {
-            ref.current.style.top = startingYPos + yPos + '%';
-        }
+const Parallax = ({ children, speedCoef = -0.5, className }: Props) => {
+    const accelerator = speedCoef;
+    const [imgOffset, setOffset] = useState(0);
+
+    const handleScroll = () => setOffset(window.scrollY);
+
+    useEffect(() => {
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const attrs = {
+        style: { transform: `translateY(${imgOffset * accelerator}px)` },
     };
 
-    useEffect(
-        () =>
-            window.addEventListener('scroll', function () {
-                parallax();
-            }),
-        []
-    );
-
     return (
-        <div className="parallax" ref={ref}>
-            <Line />
+        <div className={className} {...attrs}>
+            {children}
         </div>
     );
 };
 
-export default Shutter;
+export default Parallax;

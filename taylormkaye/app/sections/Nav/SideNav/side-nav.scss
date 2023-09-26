@@ -1,5 +1,6 @@
 .side-nav {
     height: 100%;
+    min-height: 550px;
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -10,6 +11,10 @@
     position: fixed;
     left: 0;
     top: 0;
+
+    &__nav-drawer {
+        width: 35px;
+    }
 
     &__drawer-item {
         text-decoration: none;
@@ -25,6 +30,7 @@
         width: 35px;
         height: 35px;
         border-radius: 5px;
+        cursor: pointer;
     }
 
     &__drawer-list {
@@ -32,9 +38,8 @@
         flex-direction: column;
         grid-template-columns: repeat(3, auto);
         margin-top: 15px;
-        gap: 10px;
+        gap: 13px;
         list-style: none;
-        padding-right: 2px;
     }
 
     &__socials {
@@ -51,6 +56,7 @@
         flex-direction: row;
 
         & span {
+            color: var(--color-text-secondary);
             transition: all 200ms ease-in-out;
             visibility: hidden;
             opacity: 0;
@@ -104,7 +110,7 @@
     }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 641px) {
     .side-nav {
         &:hover .side-nav__drawer-item {
             color: var(--color-text-inactive);
@@ -113,7 +119,7 @@
         &__social-link {
             &:hover {
                 & svg {
-                    fill: var(--color-text-primary);
+                    fill: var(--color-text-secondary);
                 }
                 & span {
                     visibility: visible;
@@ -147,7 +153,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
     .side-nav {
         width: 0;
         padding: 0 0 0 0;
@@ -176,7 +182,7 @@
             position: relative;
             margin: 70px 0 0 0;
             padding-left: 20px;
-            background-color: rgb(238, 236, 230);
+            background-color: var(--color-background-primary);
             font-size: 30px;
             transition: all 0.5s ease;
             transform: translateX(-100%);
