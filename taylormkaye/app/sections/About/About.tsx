@@ -5,7 +5,7 @@ const About = () => {
     return (
         <section className="flex min-h-[75vh] flex-col justify-center text-xl md:text-2xl">
             <Parallax speedCoef={-0.3}>
-                <div className="flex flex-col justify-between gap-8 sm:flex-row">
+                <div className="flex flex-col justify-between gap-12 sm:flex-row">
                     <div className="flex flex-col gap-10 sm:w-[48%]">
                         <h2>ABOUT</h2>
                         <div className="flex flex-col gap-6">
@@ -15,7 +15,7 @@ const About = () => {
                                 web experiences.
                             </p>
                             <p>
-                                I make maintainable software by chosing battle
+                                I make maintainable software by using battle
                                 tested and well supported tooling to meet client
                                 needs and ensure your website is designed with
                                 the future in mind.
@@ -24,8 +24,8 @@ const About = () => {
                                 My work includes web development with partner
                                 businesses, developing the Sous Chef design
                                 system at 7shifts, AI applications in
-                                agricultural research, and modelling / mapping
-                                of plant and insects populations.
+                                agricultural research, and modeling / mapping of
+                                plant and insects populations.
                             </p>
                             <p>
                                 Lets work together - inquiries by{' '}

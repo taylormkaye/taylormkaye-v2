@@ -7,7 +7,7 @@ type Props = {
 
 const ProjectItem = ({ project }: Props) => {
     return (
-        <li className="group flex flex-col justify-between gap-5 pb-28 last:mb-0 md:flex-row md:gap-10 md:even:flex-row-reverse md:even:text-right">
+        <li className="group flex flex-col justify-between gap-5 last:mb-0 md:flex-row md:gap-10 md:even:flex-row-reverse md:even:text-right">
             <a
                 className="md:w-[48%]"
                 target="_blank"

@@ -4,7 +4,7 @@ import { Field, Form, Formik } from 'formik';
 
 const Contact = () => {
     return (
-        <div className="flex flex-col gap-8">
+        <div className="flex min-h-screen flex-col justify-center gap-8">
             <p className="text-center text-2xl">Get in touch 👋</p>
             <Formik
                 initialValues={{ name: '', email: '', message: '' }}

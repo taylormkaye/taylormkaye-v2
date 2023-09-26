@@ -8,10 +8,10 @@ const Projects = async () => {
     return (
         <Parallax
             speedCoef={-0.1}
-            className="flex min-h-screen flex-col gap-28"
+            className="flex min-h-screen flex-col gap-10"
         >
             <h2>WORK</h2>
-            <ul>
+            <ul className="gap-28">
                 {projects.map((project) => (
                     <ProjectItem project={project} key={project._id} />
                 ))}
