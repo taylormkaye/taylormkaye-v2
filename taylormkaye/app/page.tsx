@@ -1,12 +1,10 @@
 import Landing from './sections/Landing/Landing';
 import About from './sections/About/About';
 import Nav from './sections/Nav';
-import Projects from './sections/Projects/projects';
-import Contact from './sections/Contact/contact';
+import Projects from './sections/Projects/Projects';
+import Contact from './sections/Contact/Contact';
 
 const Home = async () => {
-    // const projects = await getProjects();
-
     return (
         <>
             <Nav />
@@ -19,9 +17,5 @@ const Home = async () => {
         </>
     );
 };
-
-// max-width: 960px;
-// min-width: 350px;
-// width: 80vw;
 
 export default Home;

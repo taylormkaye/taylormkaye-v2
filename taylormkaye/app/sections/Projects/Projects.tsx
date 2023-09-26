@@ -6,8 +6,12 @@ const Projects = async () => {
     const projects = await getProjects();
 
     return (
-        <Parallax speedCoef={-0.1} className="flex flex-col gap-28">
-            <ul className="min-h-screen">
+        <Parallax
+            speedCoef={-0.1}
+            className="flex min-h-screen flex-col gap-28"
+        >
+            <h2>WORK</h2>
+            <ul>
                 {projects.map((project) => (
                     <ProjectItem project={project} key={project._id} />
                 ))}

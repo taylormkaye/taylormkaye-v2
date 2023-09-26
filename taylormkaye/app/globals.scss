@@ -6,8 +6,10 @@
     --color-text-primary: #264653;
     --color-text-secondary: #eb5c29;
     --color-text-inactive: #d3d3d3;
+    --color-text-inactive-contrast: #9f9a9a;
     --color-background-primary: #eeece6;
     --color-background-primary-rgb: 238, 236, 230;
+    --color-white: #ffffff;
 }
 
 @layer base {
@@ -39,18 +41,20 @@
         font-weight: bold;
         color: var(--color-text-secondary);
     }
+
     h2 {
-        font-family: var(--font-corben);
-        font-weight: bold;
-        color: var(--color-text-secondary);
+        font-size: 1.5rem /* 20px */;
+        line-height: 1.9rem;
     }
 
+    h2,
     h3,
     h4,
     h5,
     h6,
     p,
     a,
+    li,
     span {
         font-family: var(--font-roboto-flex);
         color: var(--color-text-primary);
@@ -60,6 +64,20 @@
     // ICON STYLES
     svg {
         fill: var(--color-text-primary);
+    }
+}
+
+@layer utilities {
+    .form-element {
+        padding: 0.25rem 0.8rem;
+        border-radius: 18px;
+        &::placeholder {
+            color: var(--color-text-inactive-contrast);
+        }
+    }
+
+    textarea {
+        resize: none;
     }
 }
 
