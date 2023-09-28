@@ -52,7 +52,11 @@ const About = () => {
                                 <li>&#8227; Website hosting & management</li>
                             </ul>
                         </div>
-                        <img src="computer.png" className="ml-auto w-1/2" />
+                        <img
+                            src="computer.png"
+                            alt="sketch of a computer"
+                            className="ml-auto w-1/2"
+                        />
                     </div>
                 </div>
             </Parallax>

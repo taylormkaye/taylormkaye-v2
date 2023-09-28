@@ -71,6 +71,7 @@
     .form-element {
         padding: 0.25rem 0.8rem;
         border-radius: 18px;
+        border: transparent 1px solid;
         &::placeholder {
             color: var(--color-text-inactive-contrast);
         }
