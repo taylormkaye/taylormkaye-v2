@@ -3,8 +3,8 @@
 import Button from '@/app/components/Button/Button';
 import { Field, Form, Formik } from 'formik';
 import { schema } from './schema';
-import Script from 'next/script';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Contact = () => {
     const onSubmit = (values: Record<string, unknown> | undefined) => {
@@ -16,11 +16,14 @@ const Contact = () => {
                 'user_LltVbwwST92SOcRB7diWe'
             )
             .then(
-                function (response) {
-                    console.log('SUCCESS!', response.status, response.text);
+                () => {
+                    toast.success('Message sent!');
                 },
-                function (error) {
-                    console.log('FAILED...', error);
+                (error) => {
+                    console.error(error);
+                    toast.error(
+                        'Error, message unable to send, try again later or contact me via your email provider.'
+                    );
                 }
             );
     };
@@ -31,9 +34,12 @@ const Contact = () => {
             <Formik
                 initialValues={{ name: '', email: '', message: '' }}
                 validationSchema={schema}
-                onSubmit={onSubmit}
+                onSubmit={(values, { resetForm }) => {
+                    onSubmit(values);
+                    resetForm();
+                }}
             >
-                {({ errors, touched, isValidating }) => (
+                {({ errors, touched }) => (
                     <Form className="flex flex-col gap-4 ">
                         <Field
                             name="name"
@@ -65,6 +71,9 @@ const Contact = () => {
                             type="submit"
                             className="form-element"
                             disabled={
+                                !touched.email ||
+                                !touched.message ||
+                                !touched.name ||
                                 !!errors.email ||
                                 !!errors.message ||
                                 !!errors.name

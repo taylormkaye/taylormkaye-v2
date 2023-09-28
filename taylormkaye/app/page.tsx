@@ -3,6 +3,8 @@ import About from './sections/About/About';
 import Nav from './sections/Nav';
 import Projects from './sections/Projects/Projects';
 import Contact from './sections/Contact/Contact';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = async () => {
     return (
@@ -13,6 +15,17 @@ const Home = async () => {
                 <About />
                 <Projects />
                 <Contact />
+                <ToastContainer
+                    position="bottom-center"
+                    autoClose={5000}
+                    hideProgressBar
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable={false}
+                    pauseOnHover
+                    theme="colored"
+                />
             </main>
         </>
     );
