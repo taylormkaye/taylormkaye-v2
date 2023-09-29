@@ -11,6 +11,7 @@ export const getProjects = async (): Promise<Project[]> => {
         groq`*[_type == "project"]{
         __id,
         __createdAt, 
+        date,
         name, 
         banner,
         "slug": slug.current, 
@@ -18,6 +19,6 @@ export const getProjects = async (): Promise<Project[]> => {
         url,
         content,
         technologies,
-    }`
+    } | order(date desc) `
     );
 };

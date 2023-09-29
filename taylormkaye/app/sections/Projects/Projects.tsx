@@ -7,8 +7,8 @@ const Projects = async () => {
     return (
         <div className="relative mt-24">
             <div className="absolute top-[-100px]" id="projects" />
-            <h2>WORK</h2>
-            <ul className="gap-28">
+            <h2 className="mb-10">WORK</h2>
+            <ul className="flex flex-col gap-20">
                 {projects.map((project) => (
                     <ProjectItem project={project} key={project._id} />
                 ))}

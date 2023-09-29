@@ -3,6 +3,7 @@ const project = {
     title: 'Projects',
     type: 'document',
     fields: [
+        { name: 'date', title: 'Date', type: 'date' },
         {
             name: 'name',
             title: 'Name',
