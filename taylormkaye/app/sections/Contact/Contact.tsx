@@ -4,7 +4,7 @@ import Button from '@/app/components/Button/Button';
 import { Field, Form, Formik } from 'formik';
 import { schema } from './schema';
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
     const onSubmit = (values: Record<string, unknown> | undefined) => {
@@ -22,14 +22,17 @@ const Contact = () => {
                 (error) => {
                     console.error(error);
                     toast.error(
-                        'Error, message unable to send, try again later or contact me via your email provider.'
+                        'Error: Message unable to send, try again later or contact me via your regular email provider or social media.'
                     );
                 }
             );
     };
 
     return (
-        <div className="flex min-h-screen flex-col justify-center gap-8">
+        <div
+            className="flex min-h-screen flex-col justify-center gap-8"
+            id="contact"
+        >
             <p className="text-center text-2xl">Get in touch 👋</p>
             <Formik
                 initialValues={{ name: '', email: '', message: '' }}
@@ -46,11 +49,7 @@ const Contact = () => {
                             type="text"
                             id="name"
                             placeholder="Name"
-                            className={`form-element ${
-                                errors.name && touched.name
-                                    ? 'border-red-600'
-                                    : ''
-                            }`}
+                            className="form-element"
                         />
                         <Field
                             name="email"

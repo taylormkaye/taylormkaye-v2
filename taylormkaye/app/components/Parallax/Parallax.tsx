@@ -6,9 +6,10 @@ type Props = {
     children: ReactNode;
     speedCoef?: number;
     className?: string;
+    id?: string;
 };
 
-const Parallax = ({ children, speedCoef = -0.5, className }: Props) => {
+const Parallax = ({ children, speedCoef = -0.5, className, id }: Props) => {
     const accelerator = speedCoef;
     const [imgOffset, setOffset] = useState(0);
 
@@ -25,7 +26,7 @@ const Parallax = ({ children, speedCoef = -0.5, className }: Props) => {
     };
 
     return (
-        <div className={className} {...attrs}>
+        <div className={className} id={id} {...attrs}>
             {children}
         </div>
     );

@@ -32,8 +32,13 @@ const SideNav = ({ isNavExpanded, onClose }: Props) => {
                             <li key={index}>
                                 <a
                                     className="side-nav__drawer-item"
-                                    href={item.url}
-                                    onClick={onClose}
+                                    onClick={() => {
+                                        document
+                                            .getElementById(item.id)
+                                            ?.scrollIntoView();
+
+                                        onClose();
+                                    }}
                                 >
                                     {item.title}
                                 </a>
