@@ -33,7 +33,7 @@ const Landing = () => {
             </Parallax>
             <Button
                 onClick={onClick}
-                className="absolute bottom-10 left-[47.5%] ml-[-12.5px] h-[25px] w-[25px] bg-transparent"
+                className="absolute bottom-10 left-[47.5%] h-[43px] w-[43px] rounded-full bg-transparent transition-all"
             >
                 <IconArrowDown />
             </Button>
