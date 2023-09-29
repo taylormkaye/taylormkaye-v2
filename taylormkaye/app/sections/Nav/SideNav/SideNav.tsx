@@ -31,7 +31,7 @@ const SideNav = ({ isNavExpanded, onClose }: Props) => {
                         return (
                             <li key={index}>
                                 <a
-                                    className="side-nav__drawer-item"
+                                    className="side-nav__drawer-item cursor-pointer"
                                     onClick={() => {
                                         document
                                             .getElementById(item.id)
