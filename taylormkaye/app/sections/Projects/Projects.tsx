@@ -5,7 +5,7 @@ const Projects = async () => {
     const projects = await getProjects();
 
     return (
-        <div className="relative">
+        <div className="relative mt-24">
             <div className="absolute top-[-100px]" id="projects" />
             <h2>WORK</h2>
             <ul className="gap-28">

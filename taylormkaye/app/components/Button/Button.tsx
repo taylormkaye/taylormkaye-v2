@@ -15,7 +15,11 @@ const Button = ({ onClick, type, disabled, className, children }: Props) => {
             onClick={onClick}
             type={type}
             disabled={disabled}
-            className={`button ${className} ${disabled && 'button--disabled'}`}
+            className={`${className} border-1 h-fit w-fit bg-white px-2 py-1  text-text-primary transition-colors  ${
+                disabled
+                    ? 'border-transparent text-text-inactive'
+                    : 'hover:border-text-primary'
+            }`}
         >
             {children}
         </button>
@@ -23,4 +27,3 @@ const Button = ({ onClick, type, disabled, className, children }: Props) => {
 };
 
 export default Button;
-2;

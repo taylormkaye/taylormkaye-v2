@@ -2,8 +2,8 @@ import Line from '@/app/components/Line';
 
 const About = () => {
     return (
-        <section className="relative flex min-h-screen flex-col pt-4 text-xl md:text-2xl">
-            <div className="absolute top-[-150px]" id="about" />
+        <section className="relative mt-10 flex min-h-fit flex-col pt-4 text-xl md:text-2xl">
+            <div className="absolute top-[-110px]" id="about" />
             <div className="flex flex-col justify-between gap-12 sm:flex-row">
                 <div className="flex flex-col gap-10 sm:w-[48%]">
                     <h2>ABOUT</h2>
