@@ -1,4 +1,9 @@
-const template = ({ componentName, jsx }, { tpl }) => {
+type Props = {
+  componentName: string;
+  jsx: string;
+}
+
+const template = ({ componentName, jsx }: Props, { tpl }: any) => {
     return tpl`
 type Props = {
   color?: string;
