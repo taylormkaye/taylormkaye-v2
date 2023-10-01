@@ -15,18 +15,18 @@ const Home = async () => {
                 <About />
                 <Projects />
                 <Contact />
-                <ToastContainer
-                    position="bottom-center"
-                    autoClose={5000}
-                    hideProgressBar
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable={false}
-                    pauseOnHover
-                    theme="colored"
-                />
             </main>
+            <ToastContainer
+                position="bottom-center"
+                autoClose={5000}
+                hideProgressBar
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable={false}
+                pauseOnHover
+                theme="colored"
+            />
         </>
     );
 };

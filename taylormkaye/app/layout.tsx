@@ -1,7 +1,6 @@
 import './globals.scss';
 import type { Metadata } from 'next';
 import { Corben, Roboto_Flex } from '@next/font/google';
-import Nav from './sections/Nav';
 
 const corben = Corben({
     subsets: ['latin'],
