@@ -25,7 +25,7 @@ const ProjectItem = ({ project }: Props) => {
                     {project.banner.map((bannerItem: any, index) => (
                         <span
                             key={index}
-                            className="font-corben block text-6xl font-bold lg:text-7xl xl:text-8xl"
+                            className="font-corben block text-5xl font-bold lg:text-6xl xl:text-7xl"
                         >
                             {bannerItem}
                         </span>

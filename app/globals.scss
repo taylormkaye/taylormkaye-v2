@@ -36,11 +36,12 @@
     }
 
     h2 {
-        font-size: 1.5rem /* 20px */;
+        font-family: var(--font-forum);
+        font-size: 2rem /* 20px */;
         line-height: 1.9rem;
+        color: var(--color-text-primary);
     }
 
-    h2,
     h3,
     h4,
     h5,
@@ -49,9 +50,9 @@
     a,
     li,
     span {
-        font-family: var(--font-roboto-flex);
+        font-family: var(--font-work-sans);
         color: var(--color-text-primary);
-        font-weight: 250;
+        font-weight: 260;
     }
 }
 

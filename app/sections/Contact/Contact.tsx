@@ -30,10 +30,10 @@ const Contact = () => {
 
     return (
         <div
-            className="flex min-h-screen flex-col justify-center gap-8"
+            className="flex min-h-screen flex-col justify-center gap-10"
             id="contact"
         >
-            <p className="text-center text-2xl">Get in touch 👋</p>
+            <h2 className="">GET IN TOUCH</h2>
             <Formik
                 initialValues={{ name: '', email: '', message: '' }}
                 validationSchema={schema}
