@@ -19,6 +19,7 @@ export const getProjects = async (): Promise<Project[]> => {
         url,
         content,
         technologies,
-    } | order(date desc) `
+    } | order(date desc) `, 
+    {cache: 'no-store'}
     );
 };
